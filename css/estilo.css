@@ -1,0 +1,44 @@
+:root {
+    --color-primario: #358600;
+    --color-acento: #CFFCFF;
+    --color-fondo: #31cb00;
+    --color-texto: #1c1917;        /* Carbón oscuro para máxima legibilidad según WCAG */
+    --radio-platillo: 12px;        /* Curvatura de esquinas en tarjetas */
+    --espaciado: 1.5rem;           /* 24px relativos (1.5 x 16px base) */
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+}
+
+.tarjeta{
+    background-color: #ffffff;
+    border-radius: var(--radio-platillo);
+    padding: var(--espaciado);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    border-left: 6px solid var(--color-primario);
+    max-width: 90%;
+    margin-bottom: 1.5rem;
+}
+.btn-articulo {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border: 2px solid var(--color-acento);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.btn-articulo:hover {
+    background-color: var(--color-acento);
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(245, 158, 11, 0.35);
+}
