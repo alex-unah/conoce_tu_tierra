@@ -48,7 +48,7 @@ body {
     color: var(--color-primario);
     margin: 1rem 0;
 }
-.img-ruta{
+.img-size{
     width: 50vw;
     height: auto;
 }
@@ -59,4 +59,20 @@ body {
 }
 td{
     text-align: center;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+figure {
+    width: 40%;
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
 }
