@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conoce tu Tierra</title>
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body>
+        <header class="tarjeta">
+            <h1>Reservaciones y Solicitud de Tours</h1>
+        </header>
+        <nav class="tarjeta">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="turismo.html">Destinos y Rutas Turísticas</a></li>
+                <li><a href="cultura.html">Cultura, Patrimonio y Gastronomía Nacional</a></li>
+                <li><a href="reservaciones.html">Reservaciones y Solicitud de Tours</a></li>
+                <li><a href="asistencia.html">Contacto y Asistencia al Turista</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="tarjeta">
+                <h2>Atención al Turista</h2>
+                <form action="reservaciones.php" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Información Personal</legend>
+                        <div>
+                            <label>Nombre completo del viajero titular</label>
+                            <input type="text" name="titular" id="idTitular"
+                            required minlength="10" maxlength="100" placeholder="Ingrese su nombre completo.">
+                        </div>
+                        <div>
+                            <label>Ingrese su Teléfono</label>
+                            <input type="tel" name="tel" id="idTel" 
+                                required minlength="11" maxlength="11" placeholder="XXXX-XXXX">
+                        </div>
+                        <div>
+                            <label>Correo electrónico</label>
+                            <input type="email" name="email" id="idEmail" 
+                                required minlength="10" maxlength="50" placeholder="usuario@gmail.com">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Información del Viaje</legend>
+                        <br>
+                        <div>
+                            <label>Seleccione su circuito o destino deseado:</label> <br>
+                            <label><input type="radio" name="destino" value="ruta-maya" checked required> Ruta Maya y Arqueología</label><br>
+                            <label><input type="radio" name="destino" value="ruta-lenca" checked required> Ruta Lenca y Pueblos con Encanto</label><br>
+                            <label><input type="radio" name="destino" value="ruta-eco" checked required> Ruta de Ecoturismo y Bosques Nublados</label><br>
+                            <label><input type="radio" name="destino" value="ruta-caribe" checked required> Ruta Caribe y Arrecifes</label><br>
+                            <label><input type="radio" name="destino" value="otro" checked required> Otro</label><br>
+                        </div>
+                        <br>
+                        <div>
+                            <label>Fecha prevista de inicio y retorno:</label> <br>
+                            <label>Fecha prevista de inicio :</label>
+                            <input type="date" id="fechaInicio" name="fecha_inicio" required min="2026-11-01"> <br>
+                            <label>Fecha prevista de retorno :</label>
+                            <input type="date" id="fechaRetorno" name="fecha_retorno" required min="2026-12-01"> <br>
+                        </div>
+                        <br>
+                        <div>
+                            <label>Número de visitantes:</label> <br>
+                            <label>Adultos: </label>
+                            <input type="number" id="numAdul" name="numAdul" required min="1" placeholder="Adultos"> <br>
+                            <label>Menores: </label>
+                            <input type="number" id="numMen" name="numMen" required min="0" placeholder="Menores (opcional)"> <br>
+                        </div>
+                        <br>
+                        <div>
+                            <label>Nivel de servicio o tipo de hospedaje requerido:</label> <br>
+                            <select id="servicio" name="servicio" required>
+                                <option value="">-- Seleccione su servicio o tipo de hospedaje --</option>
+                                <option value="cabañaEcológica">Cabaña ecológica</option>
+                                <option value="hotelColonial">Hotel colonial</option>
+                                <option value="campamentoMontaña">Campamento de montaña</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Accesibilidad y guías</legend>
+                        <div>
+                            <label>Necesidades de accesibilidad o guía bilingüe</label>
+                             <p>Selecciona tus necesidades: </strong></p>
+                            <label><input type="checkbox" name="necesidades" value="accesibilidad"> Accesibilidad limitada</label><br>
+                            <label><input type="checkbox" name="necesidades" value="guíaBilingüe"> Guía bilingüe</label><br>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Compromisos de conservación ecológica y protección del patrimonio</legend>
+                        <div>
+                            <label>Terminos y Compromisos</label>
+                             <p>Al hacer uso de nuestros servicios te comprometes a cumplir con la conservación ecológica y protección del patrimonio.</strong></p>
+                            <label><input type="checkbox" name="necesidades" value="compromiso" required> Sí, acepto.</label><br>
+        
+                        </div>
+                    </fieldset>
+                    <div class="acciones-form">
+                        <button type="submit" class="btn-articulo">Enviar Solicitud</button>
+                        <button type="reset" class="btn-articulo">Limpiar Formulario</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+         <footer class="tarjeta">
+            <p>Portal desarrollado para la asignatura <strong>ISC-305 Programación Web</strong> | UNAH.</p>
+            <p>Desarrollador: Alex Mauricio Salmerón Bustillo | Cuenta: 20191005657</p>
+            <p>&copy; 2026 | Todos los derechos reservados.</p>
+        </footer>
+    </body>
+<html>
